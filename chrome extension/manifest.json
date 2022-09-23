@@ -1,0 +1,22 @@
+{
+	"name": "Technova Bar",
+	"manifest_version": 2,
+	"description": "Just another tool to make school life easier",
+	"version": "69",
+	"background": {
+		"page": "background.html"
+	},
+	"page_action": {
+		"default_icon": "icon.jpg",
+		"default_title": "Technova Bar"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+	"permissions": [
+		"tabs"
+	]
+}
