@@ -8,8 +8,9 @@ body {
     background: #04098a;
 }
 
-.example::-webkit-scrollbar {
-    display: none;
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
   }
 
 p {
