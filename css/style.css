@@ -6,8 +6,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
-    overflow-y: hidden;
 }
+
+.example::-webkit-scrollbar {
+    display: none;
+  }
 
 p {
     font-family: 'Poppins', sans-serif;
