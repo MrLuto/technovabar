@@ -35,6 +35,7 @@ function toggleSidebar() {
 			z-index:999999;\
 			overflow-y: hidden;\
 			overflow-x: hidden;\
+			border:none;\
 		";
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;
