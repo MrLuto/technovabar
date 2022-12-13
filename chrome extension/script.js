@@ -1,3 +1,4 @@
+var authcode = "g2HsdDL6ZxvhHehKTYy8u4N9gpw";
 /*Handle requests from background.html*/
 function handleRequest(
 	//The object data with the request params
@@ -22,7 +23,7 @@ function toggleSidebar() {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
 		sidebar.innerHTML = "\
-			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/'></iframe>\
+			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + authcode +"'></iframe>\
 		";
 		sidebar.style.cssText = "\
 			position:fixed;\

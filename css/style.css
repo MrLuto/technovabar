@@ -177,3 +177,7 @@ a.article:hover {
 #include-from-outside {
     height: 100vh;
 }
+
+span {
+    color: black;
+}
