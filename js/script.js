@@ -2,7 +2,7 @@ $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
                 $('#sidebar').toggleClass('active');
             });
-            GetOsiris("g2HsdDL6ZxvhHehKTYy8u4N9gpw")
+            GetOsiris("")
             
         });
 
