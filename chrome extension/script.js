@@ -1,8 +1,6 @@
 fetch("config.json").then(function(response) {
 	return response.json();
-  }).then(function(data) {
-	console.log(data);
-  }).catch(function(err) {
+  }).then(function(config) {
 /*Small function wich create a sidebar(just to illustrate my point)*/
 var sidebarOpen = false;
 function toggleSidebar() {
