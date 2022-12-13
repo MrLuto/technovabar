@@ -1,6 +1,4 @@
-fetch("config.json").then(function(response) {
-	return response.json();
-  }).then(function(config) {
+var auth = "micha";
 /*Small function wich create a sidebar(just to illustrate my point)*/
 var sidebarOpen = false;
 function toggleSidebar() {
@@ -13,7 +11,7 @@ function toggleSidebar() {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
 		sidebar.innerHTML = "\
-			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + config.auth +"'></iframe>\
+			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + auth +"'></iframe>\
 		";
 		sidebar.style.cssText = "\
 			position:fixed;\
@@ -27,10 +25,9 @@ function toggleSidebar() {
 			overflow-y: hidden;\
 			overflow-x: hidden;\
 			border:none;\
+			margin:0px;\
 		";
 		document.body.appendChild(sidebar);
 		sidebarOpen = true;
 	}
 }
-
-});
