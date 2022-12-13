@@ -1,16 +1,8 @@
-var authcode = "g2HsdDL6ZxvhHehKTYy8u4N9gpw";
-/*Handle requests from background.html*/
-function handleRequest(
-	//The object data with the request params
-	request, 
-	//These last two ones isn't important for this example, if you want know more about it visit: http://code.google.com/chrome/extensions/messaging.html
-	sender, sendResponse
-	) {
-	if (request.callFunction == "toggleSidebar")
-		toggleSidebar();
-}
-chrome.extension.onRequest.addListener(handleRequest);
-
+fetch("config.json").then(function(response) {
+	return response.json();
+  }).then(function(data) {
+	console.log(data);
+  }).catch(function(err) {
 /*Small function wich create a sidebar(just to illustrate my point)*/
 var sidebarOpen = false;
 function toggleSidebar() {
@@ -23,7 +15,7 @@ function toggleSidebar() {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
 		sidebar.innerHTML = "\
-			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + authcode +"'></iframe>\
+			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + config.auth +"'></iframe>\
 		";
 		sidebar.style.cssText = "\
 			position:fixed;\
@@ -42,3 +34,5 @@ function toggleSidebar() {
 		sidebarOpen = true;
 	}
 }
+
+});
