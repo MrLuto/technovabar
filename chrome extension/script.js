@@ -23,7 +23,7 @@ function toggleSidebar() {
 		var sidebar = document.createElement('div');
 		sidebar.id = "mySidebar";
 		sidebar.innerHTML = "\
-			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.mrluto.tech/?auth=" + auth + "'></iframe>\
+			<iframe id='if1' width='100%' height='100%' style='visibility:visible' src='https://technovabar.byluto.nl/?auth=" + auth + "'></iframe>\
 		";
 		sidebar.style.cssText = "\
 			position:fixed;\
